@@ -1,0 +1,39 @@
+import time
+import msvcrt
+import spreadsheet
+
+print("THIS IS A TEST GAME")
+test_classes = ("Archer", "Mage", "Warrior")
+
+class Cheats():
+    def __init__(self):
+        print("Cheats enabled")
+
+
+class Character:
+    def __init__(self, name, hero):
+        self.name = name
+
+    def getInfo(self):
+        print(self.name + " is a ")
+
+
+def menu(name, *args):
+    main_character = Character(name)
+    print(main_character.name + " is your name.\nKeep this name?")
+    confirm = input("")
+    if confirm.lower() == 'yes':
+        print("Awesome " + main_character.name + ", what class would you like to be?")
+        main_class = input("")
+        print(main_class)
+
+is_user = input("Do you already have an account? ")
+if is_user.lower() == "no":
+    username = input("New username: ")
+    password = input("New password: ")
+
+
+print("Enter a name: ")
+name = input("")
+user_info = Sheet(name)
+menu(name)
